@@ -16,7 +16,7 @@ helpMsg() {
   echo "Usage: $0 [OPTIONS] <INPUT_FILE> <OUTPUT_BASENAME>"
   echo "Options:"
   echo "  --no-default-sizes    Do not generate default sizes (original, 256x256, 71x71)"
-  echo "  --size SIZE           Add a custom size (e.g., --size 128) to the output pipeline. Can be used multiple times, maximum is 1920, use keyword 'original' for original size."
+  echo "  --size SIZE           Add a custom size (e.g., --size 128) to the output pipeline. Can be used multiple times, maximum is 2048, use keyword 'original' for original size."
   echo "  --no-suffix           Do not add size suffix to output files. This can only be used if there is exactly one size specified."
   echo "  --help                 Show this help message and exit"
   echo ""
@@ -66,7 +66,7 @@ while [[ "$1" == --* ]]; do
           echo "Error: Size '$2' exceeds the maximum allowed size of 1920."
           exit 1
         fi
-        if [[ "$2" -eq 1920 ]]; then
+        if [[ "$2" -eq 2048 ]]; then
           SIZES+=("original")
           shift 2
           continue

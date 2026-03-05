@@ -62,8 +62,8 @@ while [[ "$1" == --* ]]; do
           echo "Error: Invalid size '$2'. Size must be a positive integer or 'original'."
           exit 1
         fi
-        if [[ "$2" != "original" && "$2" -gt 1920 ]]; then
-          echo "Error: Size '$2' exceeds the maximum allowed size of 1920."
+        if [[ "$2" != "original" && "$2" -gt 2048 ]]; then
+          echo "Error: Size '$2' exceeds the maximum allowed size of 2048."
           exit 1
         fi
         if [[ "$2" -eq 2048 ]]; then
